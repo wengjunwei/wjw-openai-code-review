@@ -25,7 +25,7 @@ jobs:
           java-version: '11'
 
       - name: Build With Maven
-        run: mvn clear install
+        run: mvn clean install
 
       - name: Copy openai-code-review-sdk JAR
         run: mvn dependency:copy -Dartifact=cn.wjw.code.review:openai-code-review-sdk:1.0 -DoutputDirectory=./libs
